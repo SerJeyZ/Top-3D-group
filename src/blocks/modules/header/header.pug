@@ -1,0 +1,45 @@
+-
+  const pageTitle = 'О нас'
+-
+  const nav = ['Акции','О нас','Мероприятия','Оплата и доставка','Что с моим заказом?','Гос. закупки','Блог','Мастер-классы','Контакты']
+-
+  const menu = ['3D-принтеры','3D-сканеры','Станки','Роботы','Образование','Стоматологам','Гаджеты','Материалы','ПО','Решения','Учебный центр','Услуги']
+header.header.mb70
+  .inner-block.inner-block--bg-yellow
+    .container
+      .header__top-line
+        .header__left-block
+          .header__city.city
+            span|Санкт-Петербург
+          +link('phone header__phone','+7 (812) 613-58-38','+78125135838')
+          .header__working-mode.working-mode|Пн–пт 10:00–19:00, сб-вс 10:00–17:00
+        .header__right-block
+            a.header__send.link.write-us(href="javascript:void(0);")|Напишите нам
+            a.header__send.link.write-director(href="javascript:void(0);")|Свяжитесь с директором
+            .header__messager
+              .header__messager-item
+                +link('messager messager__telegram','Телеграмм', 'javascript:void(0);')
+              .header__messager-item
+                +link('messager messager__skype','Скайп', 'javascript:void(0);')
+              .header__messager-item
+                +link('messager messager__phone','Телефон', 'javascript:void(0);')
+  .inner-block.inner-block--box-shadow
+    .container
+      .header__mid-line
+        .header__logo-block
+          +logo('header__logo logo__mobile-sm','')
+          +banner('header__banner banner__yandex','javascript:void(0);')
+        .header__mobile-menu
+          a.link.link--bg-red.header__mobile-menu-btn#products-menu(href="javascript:void(0);")
+              span|Наши продукты
+          +burger()
+        +search('header__search search--mobile-transform search__icon-search')
+        .header__user-block
+          +auth('header__auth', 'javascript:void(0);')
+          +cart('link--bg-red', 'javascript:void(0);')
+      +nav(nav,'header__nav','link--active')
+    .header__products-menu
+      .container
+        +product-menu(menu,'')
+    +mobile-menu(nav)
+    +mobile-product-menu(menu, '')

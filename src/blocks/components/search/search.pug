@@ -1,0 +1,7 @@
+mixin search(className)
+  div(class=`search ${className}`)
+    button.btn.btn-close.search__close-btn(type="button")|Закрыть
+    form.search__form(action="#")
+      input(type="text" placeholder="Введите запрос, например, Formlabs Form 2")
+      button.btn.btn__outline-red.search__btn(type="submit")|Найти
+    

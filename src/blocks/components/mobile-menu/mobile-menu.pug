@@ -1,0 +1,10 @@
+mixin mobile-menu(nav)
+  .mobile-menu
+    .mobile-menu__header
+      +logo('logo__mobile-lg','full')
+    .mobile-menu__inner
+      +nav(nav, '', 'link--active')
+      .mobile-menu__contacts
+        +link('phone','+7 (812) 613-58-38','+78125135838')
+        +link('phone link--underline','Напишите нам','javascript:void(0);')
+        +link('phone link--underline','Свяжитесь с директором','javascript:void(0);')

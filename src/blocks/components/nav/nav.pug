@@ -1,0 +1,10 @@
+mixin nav(nav, className, activeClass)
+  nav(class=`nav ${className}`)
+    ul.nav__list
+      each item in nav
+        if item==pageTitle
+          li.nav__list-item
+            a(class=`link nav__link ${activeClass}`)|#{item}
+        else
+          li.nav__list-item
+            a.link.nav__link(href="javascript:void(0);")|#{item}

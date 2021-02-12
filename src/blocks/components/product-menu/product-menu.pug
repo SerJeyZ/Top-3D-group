@@ -1,0 +1,6 @@
+mixin product-menu(products, className)
+  div(class=`products-menu ${className}`)
+    each item in products
+      .products-menu__item
+        a.link.products-menu__link(href="javascript:void(0);")|#{item}
+        .products-menu__dropdown-area

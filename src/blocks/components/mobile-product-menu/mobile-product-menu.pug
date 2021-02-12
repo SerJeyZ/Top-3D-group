@@ -1,0 +1,12 @@
+mixin mobile-product-menu(products, className)
+  div(class=`mobile-product-menu ${className}`)
+    .mobile-product-menu__header-wrap
+      .mobile-product-menu__header 
+        .mobile-product-menu__header-top
+          +logo('logo__mobile-lg','full')
+          button.btn.btn-close.mobile-product-menu__close-btn.show(type="button")|Закрыть
+    ul.mobile-product-menu__list
+      each item in products
+        li.mobile-product-menu__item
+          a.link.mobile-product-menu__link.arrow-right.arrow-right-lg(href="javascript:void(0);")|#{item}
+          .products-menu__dropdown-area

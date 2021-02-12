@@ -1,0 +1,38 @@
+.banner {
+  position     : relative;
+  flex         : 0 0 105px;
+  height       : 60px;
+  background   : #FFFFFF;
+  box-shadow   : 0px 4px 16px $shadow-color;
+  border-radius: 8px;
+  transition   : 0.2s;
+
+  &:hover {
+    box-shadow: 0px 8px 16px$shadow-color-hover;
+  }
+
+  &::before {
+    content  : "";
+    position : absolute;
+    top      : 50%;
+    left     : 50%;
+    transform: translate(-50%, -50%);
+    width    : 81px;
+    height   : 50px;
+  }
+
+  &__yandex {
+    &::before {
+      background     : url("../img/raiting-yandex.png") no-repeat center center/contain;
+      background-size: 81px 50px;
+
+      @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+        background: url("../img/raiting-yandex@2.png") no-repeat center center/contain;
+      }
+
+      ;
+    }
+
+  }
+}

@@ -1,0 +1,43 @@
+.products-menu {
+  display        : flex;
+  flex-wrap      : wrap;
+  align-items    : center;
+  justify-content: space-between;
+  padding        : 0 10px;
+  
+
+  @media(max-width:1280px) {
+    justify-content: flex-start;
+    padding        : 0;
+  }
+
+  &__item {
+    padding    : 0 5px;
+    white-space: nowrap;
+    transition : 0.2s;
+
+    &:hover {
+      background-color: #F9F9F9;
+    }
+  }
+
+  &__link {
+    position     : relative;
+    padding      : 20px 0;
+    font-size    : 13px;
+    line-height  : 18px;
+    padding-right: 20px;
+    font-weight  : 700;
+    color        : #000000;
+    &::after {
+      content   : '';
+      position  : absolute;
+      top   : 50%;
+      right : 0;
+      transform : translateY(-35%);
+      width     : 15px;
+      height    : 8px;
+      background: url(../img/svg/icon-arrow-down.svg) no-repeat center center/contain;
+    }
+  }
+}

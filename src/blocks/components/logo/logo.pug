@@ -1,0 +1,11 @@
+mixin logo(className, size)
+  if(`${size}`=='')
+    a(class=`logo ${className}` href="javascript:void(0);")
+      picture
+        source(media='(max-width: 400px)' srcset='./img/logo-mobile.svg')
+        img.logo__img(src="./img/logo.svg" width="213" height="72" alt="Top 3D Group")
+  if(`${size}`=='full')
+    a(class=`logo ${className}` href="javascript:void(0);")
+      picture
+        source(media='(max-width: 500px)' srcset='./img/logo.svg')
+        img.logo__img(src="./img/logo.svg" width="213" height="72" alt="Top 3D Group")

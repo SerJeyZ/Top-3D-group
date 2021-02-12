@@ -1,0 +1,11 @@
+mixin slider(slides, sliderTitle, id,className)
+  div(class=`slider ${className}__slider`)
+    .slider__header.mb60
+      h3.h3.slider__title|#{sliderTitle}
+      .slider__controls-btn
+        button(class=`btn slider__btn slider__btn-prew ${className}__btn-prew` type="button")|prew
+        button(class=`btn slider__btn slider__btn-next ${className}__btn-next` type="button")|next
+    div(class="slider__content" id=`${id}`)
+      each item in slides
+        .slider__item
+          +slide-youtube(item)

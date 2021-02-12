@@ -1,0 +1,19 @@
+.play-btn {
+  position : absolute;
+  top      : 51%;
+  left     : 50%;
+  transform: translate(-50%, -50%);
+  width    : 67px;
+  height   : 67px;
+  padding  : 0;
+  font-size: 0;
+}
+.play-btn-bg {
+  fill        :#212121;
+  fill-opacity:0.8;
+  transition  :0.2s;
+  &:hover {
+    fill:red;
+    fill-opacity:1;
+  }
+}

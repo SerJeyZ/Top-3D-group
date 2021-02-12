@@ -1,0 +1,27 @@
+.link {
+  position       : relative;
+  display        : inline-block;
+  vertical-align : top;
+  text-decoration: none;
+  color          : #000000;
+  text-align: center;
+  border-radius : $border-radius;
+  cursor: pointer;
+  outline        : none;
+  white-space : nowrap;
+  &--underline {
+    text-decoration: underline;
+  }
+
+  &--active {
+    color : $c-red;
+    cursor: default;
+  }
+  &--bg-red {
+    color : #FFFFFF;
+    background-color: $c-red;
+    &:hover {
+      background-color: lighten($color: $c-red, $amount: 5);
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.auth {
+  position    : relative;
+  display     : inline-block;
+  max-width: 78px;
+  padding     : 5px;
+  padding-left: 32px;
+  font-weight : 600;
+  font-size   : 13px;
+  line-height : 18px;
+  color       : #222222;
+  white-space : nowrap;
+  &:hover::after {
+    opacity: 1;
+    @media(max-width: 900px) {
+      opacity: 0;
+    }
+  }
+
+  @media(max-width: 900px) {
+    max-width: 91px;
+    padding      : 9px 16px;
+    padding-left : 32px;
+    border       : 1px solid $c-red;
+    border-radius: 4px;
+  }
+
+  &::before {
+    content   : "";
+    position  : absolute;
+    width     : 24px;
+    height    : 24px;
+    top       : 50%;
+    left      : 0;
+    transform : translateY(-50%);
+    background: url("../img/svg/icon-login.svg") no-repeat center center/contain;
+
+    @media(max-width:900px) {
+      width : 29px;
+      height: 30px;
+    }
+  }
+
+  &::after {
+    content         : "";
+    position        : absolute;
+    top             : 85%;
+    right           : 0;
+    width           : 60%;
+    height          : 1px;
+    background-color: #222222;
+    opacity         : 0;
+    transition      : 0.25s;
+  }
+  span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

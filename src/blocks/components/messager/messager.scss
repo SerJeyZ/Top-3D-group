@@ -1,0 +1,29 @@
+.messager {
+  display   : inline-block;
+  width     : 18px;
+  height    : 18px;
+  font-size : 0;
+  transition: 0.15s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &__telegram {
+    width     : 16px;
+    height    : 16px;
+    background: url("../img/svg/icon-telegramm.svg") no-repeat center center/contain;
+  }
+
+  &__skype {
+    width     : 18px;
+    height    : 14px;
+    background: url("../img/svg/icon-skype.svg") no-repeat center center/contain;
+  }
+
+  &__phone {
+    width     : 16px;
+    height    : 16px;
+    background: url("../img/svg/icon-phone.svg") no-repeat center center/contain;
+  }
+}

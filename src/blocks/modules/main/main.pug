@@ -1,0 +1,49 @@
+-
+  const links = ['Как устроена наша компания изнутри','Как создавалась компания - необычная история','Читай о нас на 3D Today']
+-
+  const slides = [
+    {src:'OYFOWAL1NlA',alt:'Знакомство с компанией'},
+    {src:'SOYBsly_yN8',alt:'Изменения через год'},
+    {src:'EVyLTHevw4E',alt:'Производство 3D принтеров'},
+    {src:'Tdz1IX89geU',alt:'TOP 3D Expo'},
+    {src:'OYFOWAL1NlA',alt:'Знакомство с компанией'},
+    {src:'SOYBsly_yN8',alt:'Изменения через год'},
+    {src:'OYFOWAL1NlA',alt:'Знакомство с компанией'},
+    {src:'SOYBsly_yN8',alt:'Изменения через год'},
+  ]
+main.main
+  section.about-us
+    .container
+      .about-us__img.mb50
+        picture
+          source(media="(max-width:600px)" type="image/webp" srcset="./img/about-us-mobile.webp")
+          source(media="(max-width:600px)" srcset="./img/about-us-mobile.jpg")
+          source(type="image/webp" srcset="./img/about-us.webp")
+          img(src="./img/about-us.jpg" alt="collective")
+      .about-us__job.mb70
+        .about-us__send-resume
+          strong.sub-title.about-us__job-sub-title|Твоя работа<br> в крупнейшем интеграторе цифрового производства
+          .about-us__btn-block
+            a.link.link--bg-red.about-us__btn|Отправить резюме
+            span.text-descr.about-us__btn-block-descr|Нажимая кнопку, вы соглашаетесь на обработку персональных данных.
+        .about-us__company-descr
+          p.text|Top 3D Shop – лидер по продажам 3D-оборудования в России и странах СНГ. В 2018 мы стали лучшим интегратором 3D оборудования по аддитивным технологиям и цифровому производству по версии 3D Print Awards.
+          p.text|За 6 лет работы более 10 000 клиентов по всей России и СНГ выбрали Top 3D Shop. В 2018 наш оборот составил 600 млн. рублей, в компании работает более 100 сотрудников.
+          p.text|Новая цель: 1 млрд торгового оборота в этом году и выход на международные рынки. Если вы — целеустремленный специалист, готовый учиться новым навыкам и учить других, мыслите не просто как исполнитель, а как владелец своего направления, то нам по пути!
+      .about-us__link-block.mb70
+        h4.h4.h4__right-line.mb50
+          span.h4__text|Лучше один раз увидеть:
+          span.line
+        .links
+          each item,i in links
+            if(i==0) 
+              .links__item
+                a.links__link.link.link--active(href="javascript:void(0);")
+                  span|#{item}
+            else 
+              .links__item
+                a.links__link.link(href="javascript:void(0);")
+                  span|#{item}
+    .inner-block.inner-block--bg-grey
+      .container
+        +slider(slides, 'Видео о нас','slider-about-us' ,'about-us')
